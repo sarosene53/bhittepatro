@@ -311,13 +311,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (STATIC_BS_HOLIDAYS[bsKey]) {
                 holidayName = STATIC_BS_HOLIDAYS[bsKey][currentLang];
             }
-            
+
             // 2. Lunar Holidays (Overrides BS if both fall on same day, though rare)
             const lunarKey = `${currentBsMonthIndex}-${lunarDetails.tithiIndex}`;
             if (LUNAR_HOLIDAYS[lunarKey]) {
                 holidayName = LUNAR_HOLIDAYS[lunarKey][currentLang];
             }
-            
+
             if (holidayName) {
                 cell.classList.add('holiday');
                 const festivalEl = document.createElement('div');
@@ -396,7 +396,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Temporarily adjust styles for better capture if needed
         const originalBg = panel.style.background;
         const originalBoxShadow = panel.style.boxShadow;
-        
+
         // Solidify the background for the export
         panel.style.background = '#fdfbf7';
         panel.style.boxShadow = 'none';
@@ -409,13 +409,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 scale: 2, // High resolution
                 backgroundColor: '#fdfbf7',
                 logging: false,
-                useCORS: true 
+                useCORS: true
             });
 
             // Create download link
             const url = canvas.toDataURL('image/png');
             const a = document.createElement('a');
-            
+
             // Format filename: nepali-calendar-year-month.png
             const t = TRANSLATIONS.en; // pure english filename best practice
             const monthName = t.bsMonths[currentBsMonthIndex].toLowerCase();
