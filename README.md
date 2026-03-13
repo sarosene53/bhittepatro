@@ -2,6 +2,8 @@
 
 A modern, responsive, and beautiful Nepali Calendar (Bikram Sambat) web application built with HTML, CSS, and vanilla JavaScript. 
 
+[Click here to visit the site] (https://sarosene53.github.io/bhittepatro/)
+
 ## Features
 
 - **Accurate Date Engine**: Powered by the `nepali-date-converter` library to ensure accurate BS (Bikram Sambat) to AD (Anno Domini) conversions.
