@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // State Variables
     let currentLang = 'en'; // 'en' or 'ne'
-    let currentTheme = 'dark'; // 'dark' or 'light'
+    let currentTheme = 'light'; // Default is light in CSS
 
     let currentBsYear = 0;
     let currentBsMonthIndex = 0; // 0-11
@@ -372,11 +372,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentTheme === 'dark') {
             currentTheme = 'light';
             document.documentElement.setAttribute('data-theme', 'light');
-            toggleThemeBtn.textContent = '☀️ Light';
+            toggleThemeBtn.textContent = '🌙 Dark';
         } else {
             currentTheme = 'dark';
-            document.documentElement.removeAttribute('data-theme');
-            toggleThemeBtn.textContent = '🌙 Dark';
+            document.documentElement.setAttribute('data-theme', 'dark');
+            toggleThemeBtn.textContent = '☀️ Light';
         }
     });
 
