@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@ishubhamx/panchangam-js": "^2.2.3",
+    "nepali-date-converter": "^3.4.0"
+  }
+}

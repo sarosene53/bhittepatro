@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhittepatro - Nepali Calendar</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Paper Calendar Panel -->
+        <main class="calendar-panel paper-panel">
+
+            <!-- Calendar Header -->
+            <header class="calendar-header">
+                <!-- Top Controls -->
+                <div class="calendar-controls">
+                    <button id="toggle-lang" class="toggle-btn" aria-label="Toggle Language">🔤 EN</button>
+                    <button id="toggle-theme" class="toggle-btn" aria-label="Toggle Theme">🌙 Dark</button>
+                </div>
+
+                <div class="calendar-nav">
+                    <button id="prev-month" class="nav-btn" aria-label="Previous Month">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M15 18l-6-6 6-6" />
+                        </svg>
+                    </button>
+
+                    <div class="month-titles">
+                        <div class="bs-month-title">
+                            <select id="bs-month-select" class="glass-select" aria-label="Select Month"></select>
+                            <select id="bs-year-select" class="glass-select highlight-select"
+                                aria-label="Select Year"></select>
+                        </div>
+                        <p class="ad-month-title" id="ad-months-span">Loading...</p>
+                    </div>
+
+                    <button id="next-month" class="nav-btn" aria-label="Next Month">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Calendar Display -->
+            <div class="calendar-wrapper">
+                <!-- Days of Week Header -->
+                <div class="weekdays" id="weekdays-header">
+                    <div data-day="0">Sun</div>
+                    <div data-day="1">Mon</div>
+                    <div data-day="2">Tue</div>
+                    <div data-day="3">Wed</div>
+                    <div data-day="4">Thu</div>
+                    <div data-day="5">Fri</div>
+                    <div class="weekend-label" data-day="6">Sat</div>
+                </div>
+
+                <!-- Calendar Grid -->
+                <div class="calendar-grid" id="calendar-grid">
+                    <!-- JavaScript will inject days here -->
+                </div>
+            </div>
+
+            <!-- Footer Legend -->
+            <footer class="calendar-footer">
+                <button id="jump-today" class="btn-today">Jump to Today</button>
+                <button id="export-btn" class="btn-export" aria-label="Download Image">📸 Save Image</button>
+            </footer>
+
+        </main>
+    </div>
+
+    <!-- Load html2canvas for Download feature -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- Load Nepali Date Converter script -->
+    <script src="https://cdn.jsdelivr.net/npm/nepali-date-converter/dist/nepali-date-converter.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
