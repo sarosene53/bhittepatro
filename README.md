@@ -1,8 +1,7 @@
 # Bhittepatro (Nepali Calendar)
 
 A modern, responsive, and beautiful Nepali Calendar (Bikram Sambat) web application built with HTML, CSS, and vanilla JavaScript. 
-
-[Click here to visit the site] (https://sarosene53.github.io/bhittepatro/)
+Click here to visit the site (https://sarosene53.github.io/bhittepatro/)
 
 ## Features
 
